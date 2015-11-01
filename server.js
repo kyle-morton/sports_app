@@ -12,6 +12,7 @@ var bodyParser = require('body-parser'); 	// get body-parser
 var morgan     = require('morgan'); 		// used to see requests
 var mongoose   = require('mongoose');
 var port       = config.port;
+var path 	   = require('path');
 
 // APP CONFIGURATION ---------------------
 
@@ -39,9 +40,23 @@ mongoose.connect(config.database);
 // used for requests that our frontend will make
 app.use(express.static(__dirname + '/public'));
 
+// ROUTES FOR OUR API
+// ======================================
+
+// REGISTER OUR ROUTES -------------------------------
+var apiRoutes = require('./app/routes/api')(app, express);
+app.use('/api', apiRoutes);
+
 // basic route for the home page
-app.get('/', function(req, res) {
-	res.send('Welcome to the home page!');
+// app.get('/', function(req, res) {
+// 	res.send('Welcome to the home page!');
+// });
+
+/* Catchall comes after api routes so catchall only catches non-api routes! */
+
+//MAIN CATCHALL ROUTE -> Redirect users to index page so angular can take over!
+app.get('*', function(req, res) {
+	res.sendFile(path.join(__dirname + '/public/app/views/index.html'));
 });
 
 app.listen(port);

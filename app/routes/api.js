@@ -20,8 +20,6 @@ module.exports = function(app, express) {
 		apiRouter.post('/authenticate', function(req, res) {
 			
 			var authMessage = "Authentication Failed: ";	
-			
-			console.log("AUTH: " + req.body.username + " " + req.body.password);
 				
 			//if entered UN & PW
 			if(req.body.username && req.body.password) {

@@ -1,0 +1,7 @@
+node_modules/gulp-concat/
+node_modules/gulp-jshint/
+node_modules/gulp-minify-css/
+node_modules/gulp-ng-annotate/
+node_modules/gulp-nodemon/
+node_modules/gulp-uglify/
+node_modules/gulp/

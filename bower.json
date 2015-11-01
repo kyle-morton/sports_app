@@ -1,0 +1,24 @@
+{
+  "name": "sports_app",
+  "version": "0.0.0",
+  "homepage": "https://github.com/kylemorton5770/sports_app",
+  "authors": [
+    "kylemorton5770 <michael.morton@smail.astate.edu>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "fontawesome#~4.4.0"
+  }
+}

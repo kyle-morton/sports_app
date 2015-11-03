@@ -41,18 +41,21 @@
 
 <!-- NAVBAR -->
 <header>
-	<div class="navbar navbar-inverse" ng-if="main.loggedIn">
+	<div class="navbar">
 		<div class="container">
 			<div class="navbar-header">
-				<a href="/" class="navbar-brand"><i class="fa fa-dribbble"></i>The Court</a>
+				<a href="/" class="navbar-brand"><i class="fa fa-dribbble fa-lg"></i><b id="brandHeader">The Court</b></a>
 			</div>	
 			<ul class="nav navbar-nav">
-				<!--<li>
-					<a href="/users"><span class="glyphicon glyphicon-user"></span> Users</a>
-				</li>-->
+				<div class="box form-inline searchBox">
+					<div class="container-1">
+						<span class="icon"><i class="fa fa-search"></i></span>
+						<input type="search" id="search" class="form-control" placeholder="Search..." />
+					</div>
+				</div>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-				<li ng-if="!main.loggedIn"><a href="/login">Login</a></li>
+				<li ng-if="!main.loggedIn"><a class="navbar-brand" href="/login"><b>Login</b><i class="fa fa-sign-in"></i></a></li>
 				<li ng-if="main.loggedIn"><a id="userPopupTrigger">Hello {{ main.user.username }}!</a></li>
 				<li ng-if="main.loggedIn"><a href="#" ng-click="main.doLogout()">Logout</a></li>
 			</ul>

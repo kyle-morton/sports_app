@@ -9,6 +9,7 @@ header .navbar {
 }
 
 
+
 /* SPINNER ANIMATIONS (add .spinner class to any 
 icon to make it spin!)
 ====================== */
@@ -59,9 +60,41 @@ icon to make it spin!)
 	min-height: 400px;
 }
 
-.navbar-inverse {
-	background-color: #000;
+.navbar {
+	background-color: #FA8320;
 }
+
+#brandHeader {
+	font-size: 24px;
+}
+
+
+/* SEARCH BOX */
+.searchBox {
+	margin-top: 15px;
+}
+
+.container-1{
+  width: 300px;
+  vertical-align: middle;
+  white-space: nowrap;
+  position: relative;
+}
+
+.container-1 input#search{
+  width: 250px;
+  height: 25px;
+  background: #2b303b;
+  border: none;
+  font-size: 10pt;
+  /*float: right;*/
+  color: #FA8320;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* SEARCH BOX END */
 
 .leftSideBar {
 	float: left;

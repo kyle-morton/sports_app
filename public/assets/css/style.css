@@ -48,6 +48,10 @@ icon to make it spin!)
 	background-color: #D8D8D8 ; 
 }*/
 
+.navbar-header {
+  float: left;
+}
+
 .anchorStyle:hover {
 	cursor:pointer;
 }
@@ -62,6 +66,14 @@ icon to make it spin!)
 
 .navbar {
 	background-color: #FA8320;
+}
+
+.sweet-alert {
+  width: 550px !important;
+}
+
+.navText{
+  color: #2b303b;
 }
 
 #brandHeader {
@@ -79,6 +91,20 @@ icon to make it spin!)
   vertical-align: middle;
   white-space: nowrap;
   position: relative;
+}
+
+.fa-dribbble {
+  font-size: 1.66666em !important;
+  color: #2b303b;
+}
+
+.fa-sign-in {
+  color: #2b303b;
+}
+
+.btn-primary {
+  background-color: #FA8320 !important;
+  border-color: #ffb732 !important;
 }
 
 .container-1 input#search{

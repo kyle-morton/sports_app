@@ -28,6 +28,23 @@ angular.module ('mainCtrl', [])
 
 	});
 	
+	vm.openLogin = function() {
+		console.log("OPEN LOGIN!");
+		
+		swal({  
+			title: "<b>Login</b>!",
+			text: '<form ng-submit="login.doLogin()" ng-controller="userController as login">' +
+				  	'<div class="form-group">' + 
+						'<input type="text" class="form-control" ng-model="login.loginData.username" placeholder="username...">' +
+				  	'</div>' +
+					'<button type="submit" class="btn btn-primary text-center">Login</button>' +
+					'</form>',
+			showConfirmButton: false,   
+			html: true
+			});
+		
+	};
+	
 	//handle login form submission
 	vm.doLogin = function() {
 		

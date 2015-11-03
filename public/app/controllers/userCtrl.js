@@ -3,7 +3,7 @@ angular.module ('userCtrl', ['userService'])
 //Inject USER factory
 .controller ('userController', function (User, Post) {
 	
-	
+	console.log("USER CONTROLLER!");
 	
 	var vm = this;
 	vm.processing = true;

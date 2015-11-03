@@ -44,7 +44,7 @@
 	<div class="navbar">
 		<div class="container">
 			<div class="navbar-header">
-				<a href="/" class="navbar-brand"><i class="fa fa-dribbble fa-lg"></i><b id="brandHeader">The Court</b></a>
+				<a href="/" class="navbar-brand"><i class="fa fa-dribbble fa-lg"></i><b id="brandHeader" class="navText">The Court</b></a>
 			</div>	
 			<ul class="nav navbar-nav">
 				<div class="box form-inline searchBox">
@@ -55,8 +55,9 @@
 				</div>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-				<li ng-if="!main.loggedIn"><a class="navbar-brand" href="/login"><b>Login</b><i class="fa fa-sign-in"></i></a></li>
-				<li ng-if="main.loggedIn"><a id="userPopupTrigger">Hello {{ main.user.username }}!</a></li>
+				<li ng-if="!main.loggedIn"><a href="#" class="navbar-brand" ng-click="main.openLogin()"><b class="navText">Login</b><i class="fa fa-sign-in"></i></a></li>
+				
+				<li ng-if="main.loggedIn"><a href="#" id="userPopupTrigger">Hello {{ main.user.username }}!</a></li>
 				<li ng-if="main.loggedIn"><a href="#" ng-click="main.doLogout()">Logout</a></li>
 			</ul>
 		</div>
